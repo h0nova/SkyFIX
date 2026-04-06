@@ -1,0 +1,25 @@
+$black: #1a1a1a;
+$white: #fff;
+$dark-blue: #233559;
+$light-blue: #cee4f2;
+$blue-gradient: linear-gradient(125deg, $dark-blue 0%, $light-blue 100%);
+
+%main-400 {
+  font-family: "Poppins-Regular";
+  font-weight: 400;
+}
+
+%main-500 {
+  font-family: "Poppins-Medium";
+  font-weight: 500;
+}
+
+%main-600 {
+  font-family: "Poppins-SemiBold";
+  font-weight: 600;
+}
+
+%main-700 {
+  font-family: "Poppins-Bold";
+  font-weight: 700;
+}

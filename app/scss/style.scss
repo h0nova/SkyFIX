@@ -1,0 +1,137 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "reset";
+@import "global";
+
+// start HEADER
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $dark-blue;
+  max-width: 100%;
+  width: 100%;
+  padding: 30px 0;
+  color: $white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 15px;
+    background: $blue-gradient;
+    border: none;
+    border-radius: 8px;
+    color: $white;
+  }
+}
+
+.menu {
+  @extend %main-500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 650px;
+  width: 100%;
+}
+
+// end HEADER
+
+// start HOME
+
+.home {
+  margin-top: 114px;
+  background-image: url("../images/home-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 140px 0;
+  color: $white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($color: $dark-blue, $alpha: 0.7);
+    padding: 40px;
+    width: 100%;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    flex: 1;
+  }
+
+  &__title {
+    @extend %main-500;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  &__subtitle {
+    @extend %main-500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &__text {
+    @extend %main-400;
+  }
+
+  &__form-wrapper {
+    height: 100%;
+    flex: 1;
+  }
+
+  &__form {
+    margin-top: 20px;
+  }
+
+  &__label {
+    @extend %main-500;
+    font-size: 20px;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: $light-blue;
+
+    &::placeholder {
+      @extend %main-400;
+      color: $black;
+      font-size: 14px;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 200px;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 10px 0;
+    background: $blue-gradient;
+    border: none;
+    border-radius: 8px;
+    color: $white;
+  }
+}
+
+// end HOME
+
+@import "media";
