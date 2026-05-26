@@ -1,2 +1,5 @@
 node_modules/
-build/.DS_Store
+dist/
+.DS_Store
+package-lock.json
+>>>>>>> e083756 (added git ignore)
