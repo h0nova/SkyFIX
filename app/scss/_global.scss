@@ -14,3 +14,11 @@ body {
 .accent {
   color: $accent;
 }
+
+.title {
+  @extend %main-600;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  margin-bottom: 25px;
+}

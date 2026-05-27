@@ -2,4 +2,3 @@ node_modules/
 dist/
 .DS_Store
 package-lock.json
->>>>>>> e083756 (added git ignore)

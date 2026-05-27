@@ -1,7 +1,7 @@
 $black: #1a1a1a;
 $white: #fff;
 $dark-blue: #233559;
-$light-blue: #cee4f2;
+$light-blue: #e1f3ff;
 $accent: #e9631a;
 $gray: #676767;
 $blue-gradient: linear-gradient(125deg, $dark-blue 0%, $light-blue 100%);
@@ -24,4 +24,24 @@ $blue-gradient: linear-gradient(125deg, $dark-blue 0%, $light-blue 100%);
 %main-700 {
   font-family: "Poppins-Bold";
   font-weight: 700;
+}
+
+%button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px 25px;
+  background: $accent;
+  border: none;
+  border-radius: 8px;
+  color: $white;
+  border: 2px solid $accent;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background-color: $white;
+    color: $accent;
+  }
 }
