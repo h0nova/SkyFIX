@@ -31,11 +31,10 @@ $blue-gradient: linear-gradient(125deg, $dark-blue 0%, $light-blue 100%);
   box-sizing: border-box;
   width: 100%;
   padding: 11px 25px;
-  background: $accent;
-  border: none;
+  background-color: $accent;
   border-radius: 8px;
   color: $white;
-  border: 2px solid $accent;
+  border: 2px solid transparent;
   cursor: pointer;
   transition:
     background-color 0.2s,
@@ -44,5 +43,6 @@ $blue-gradient: linear-gradient(125deg, $dark-blue 0%, $light-blue 100%);
   &:hover {
     background-color: $white;
     color: $accent;
+    border-color: $accent;
   }
 }
