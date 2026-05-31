@@ -1,4 +1,13 @@
 $(function () {
+  mixitup('.gallery__list', {
+    selectors: {
+      control: '.gallery__btn'
+    },
+    animation: {
+      duration: 300
+    }
+  });
+
   $('.process__btn').on('click', function () {
     var index = $(this).closest('.process__item').index();
 

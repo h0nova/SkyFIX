@@ -511,4 +511,63 @@
 
 // end PROCESS
 
+// start GALLERY
+
+.gallery {
+  &__filter-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    @extend %main-500;
+    box-sizing: border-box;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition:
+      border-left-color 0.3s,
+      border-right-color 0.3s,
+      color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $accent;
+    border-left-color: $accent;
+    border-right-color: $accent;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  &__item {
+    position: relative;
+    width: 370px;
+    height: 370px;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// end GALLERY
+
 @import "media";
