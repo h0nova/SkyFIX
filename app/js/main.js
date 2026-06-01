@@ -1,4 +1,21 @@
 $(function () {
+  $('.feedback__list').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    speed: 400,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   mixitup('.gallery__list', {
     selectors: {
       control: '.gallery__btn'
