@@ -685,4 +685,39 @@
 }
 
 // end FEEDBACK
+
+// start CONTACT-US
+
+.contact-us {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  &__content {
+    max-width: 810px;
+  }
+  .title {
+    text-align: left;
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  &__text {
+    @extend %main-500;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &__btn {
+    @extend %button;
+    padding: 20px 0;
+    font-size: 24px;
+  }
+}
+
+// end CONTACT-US
 @import "media";
