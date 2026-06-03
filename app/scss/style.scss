@@ -720,4 +720,115 @@
 }
 
 // end CONTACT-US
+
+// start FOOTER
+
+.footer {
+  background-color: $dark-blue;
+
+  &__top {
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $white;
+  }
+
+  &__description {
+    max-width: 439px;
+  }
+
+  .logo {
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    color: $white;
+  }
+
+  &__btn {
+    @extend %button;
+    max-width: fit-content;
+    font-size: 20px;
+    padding: 20px 45px;
+  }
+
+  &__list {
+    @extend %main-500;
+    font-size: 24px;
+    line-height: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 135px);
+    grid-template-rows: repeat(4, 36px);
+    gap: 30px;
+    color: $white;
+  }
+
+  &__link,
+  &__number,
+  &__mail {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__contact {
+    color: $white;
+
+    .footer__text {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__number {
+    display: block;
+    @extend %main-700;
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  &__mail {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__social-link {
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $accent;
+    }
+  }
+
+  &__bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    font-size: 14px;
+  }
+}
+
+// end FOOTER
+
 @import "media";
