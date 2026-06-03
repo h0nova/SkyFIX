@@ -15,7 +15,7 @@
   width: 100%;
   padding: 30px 0;
   color: $white;
-  z-index: 999;
+  z-index: 50;
 
   .container {
     padding: 0;
@@ -75,6 +75,88 @@
 }
 
 // end HEADER
+
+// start CALL-NOW
+
+.call-now {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: $black, $alpha: 0.7);
+
+  &--active {
+    display: block;
+  }
+
+  &__inner {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    max-width: 748px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    border-radius: 8px;
+  }
+
+  &__content {
+    @extend %main-500;
+    padding: 40px;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 90px;
+    margin-bottom: 10px;
+  }
+
+  &__text,
+  &__link {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__img {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: none;
+    background-image: url("../images/close.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $accent;
+    }
+  }
+}
+
+// end CALL-NOW
 
 // start HOME
 
