@@ -37,11 +37,40 @@
               <a href="#contact-us" class="menu__link">Contact Us</a>
             </li>
           </ul>
+          <button type="button" class="burger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <button type="button" class="header__btn">Schedule Now</button>
         </div>
       </div>
     </header>
     <main class="main">
+      <section class="call-now">
+        <div class="call-now__inner">
+          <div class="call-now__content">
+            <h2 class="call-now__title">
+              Call Now
+            </h2>
+              <p class="call-now__text">
+                Number
+              </p>
+              <a href="tel:+12532178806" class="call-now__link">
+                +1 253 217 8806
+              </a>
+              <p class="call-now__text">
+                Email
+              </p>
+              <a href="mailto:shopskyfix@gmail.com" class="call-now__link">
+                shopskyfix@gmail.com
+              </a>
+          </div>
+          <img src="images/call-now.jpg" alt="call now" class="call-now__img">
+          <button class="call-now__btn">
+          </button>
+        </div>
+      </section>
       <section class="home" id="home">
         <div class="container">
           <div class="home__inner">
@@ -65,11 +94,12 @@
             </div>
             <div class="home__form-wrapper">
               <h2 class="home__subtitle">Request a consultation</h2>
-              <form action="#" class="home__form">
+              <form action="https://formspree.io/f/xzdqpklb" method="POST" class="home__form">
                 <label class="home__label">
                   Full name*
                   <input
                     type="text"
+                    name="name"
                     class="home__input"
                     placeholder="what’s your name?"
                   />
@@ -78,6 +108,7 @@
                   Phone number*
                   <input
                     type="text"
+                    name="phone"
                     class="home__input"
                     placeholder="(012) 345 6789"
                   />
@@ -85,6 +116,7 @@
                 <label class="home__label">
                   Questions
                   <textarea
+                    name="message"
                     class="home__textarea"
                     placeholder="What is your question?"
                   ></textarea>
@@ -823,6 +855,57 @@
         </div>
       </div>
     </footer>
+
+    <div class="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="#home" class="mobile-menu__link">Home</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#about" class="mobile-menu__link">About</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#service" class="mobile-menu__link">Services</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#process" class="mobile-menu__link">Process</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#gallery" class="mobile-menu__link">Gallery</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#feedback" class="mobile-menu__link">Feedback</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#contact-us" class="mobile-menu__link">Contact Us</a>
+        </li>
+      </ul>
+      <a href="tel:+12532178806" class="mobile-menu__phone">+1 253 217 8806</a>
+      <a href="mailto:shopskyfix@gmail.com" class="mobile-menu__mail">shopskyfix@gmail.com</a>
+      <p class="mobile-menu__social-text">Find us on social media:</p>
+      <ul class="mobile-menu__social-list">
+        <li class="mobile-menu__social-item">
+          <a href="#" class="mobile-menu__social-link">
+            <img src="images/youtube.svg" alt="youtube" class="mobile-menu__icon" />
+          </a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a href="#" class="mobile-menu__social-link">
+            <img src="images/telegram.svg" alt="telegram" class="mobile-menu__icon" />
+          </a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a href="#" class="mobile-menu__social-link">
+            <img src="images/instagram.svg" alt="instagram" class="mobile-menu__icon" />
+          </a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a href="#" class="mobile-menu__social-link">
+            <img src="images/facebook.svg" alt="facebook" class="mobile-menu__icon" />
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <script src="./js/main.min.js"></script>
   </body>
