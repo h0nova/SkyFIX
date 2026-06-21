@@ -43,7 +43,7 @@ function scripts() {
 }
 
 function images() {
-  return src('app/images/**/*.*') 
+  return src('app/images/**/*.*')
   .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -55,7 +55,7 @@ function images() {
         ]
     })
   ]))
-  .pipe(dest('dist/images')) 
+  .pipe(dest('docs/images'))
 }
 
 function build() {
@@ -65,11 +65,11 @@ function build() {
     'app/js/main.min.js',
     'app/fonts/*.**',
   ], {base: 'app'})
-  .pipe(dest('dist'))
+  .pipe(dest('docs'))
 }
 
 function cleanDist() {
-  return del('dist')
+  return del('docs')
 }
 
 function watching() {
@@ -85,5 +85,6 @@ exports.watching    = watching;
 exports.images      = images;
 exports.cleanDist      = cleanDist;
 exports.build       = series(cleanDist, images, build);
+exports.cleanDist   = cleanDist;
 
 exports.default = parallel(styles, scripts, browsersync, watching);

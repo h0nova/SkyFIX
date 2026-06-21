@@ -2,13 +2,16 @@ $(function () {
   $(".feedback__list").slick({
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     dots: false,
     infinite: true,
+    swipe: true,
     speed: 400,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
           slidesToShow: 1,
         },
@@ -25,8 +28,26 @@ $(function () {
     },
   });
 
-  $(".call-now__btn, .header__btn, .about__btn, .service__btn, .contact-us__btn, .footer__btn").on("click", function () {
+  $(
+    ".call-now__btn, .header__btn, .about__btn, .service__btn, .contact-us__btn, .footer__btn",
+  ).on("click", function () {
     $(".call-now").toggleClass("call-now--active");
+  });
+
+  $(".call-now").on("click", function (e) {
+    if (!$(e.target).closest(".call-now__inner").length) {
+      $(".call-now").removeClass("call-now--active");
+    }
+  });
+
+  $(".burger").on("click", function () {
+    $(this).toggleClass("burger--active");
+    $(".mobile-menu").toggleClass("mobile-menu--active");
+  });
+
+  $(".mobile-menu__link").on("click", function () {
+    $(".burger").removeClass("burger--active");
+    $(".mobile-menu").removeClass("mobile-menu--active");
   });
 
   $(".process__btn").on("click", function () {

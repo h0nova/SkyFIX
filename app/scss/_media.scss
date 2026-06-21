@@ -1,0 +1,173 @@
+@media screen and (max-width: 1240px) {
+  .container {
+    padding: 40px;
+  }
+
+  .service {
+    &__item {
+      max-width: calc(50% - 15px);
+    }
+  }
+
+  .gallery {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contact-us {
+    &__inner {
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .call-now {
+    &__inner {
+      flex-direction: column-reverse;
+      max-width: 362px;
+    }
+  }
+
+  .container {
+    padding: 40px 40px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .home {
+    padding: 140px 0;
+
+    &__top {
+      margin-bottom: 40px;
+    }
+
+    &__quite {
+      display: none;
+    }
+
+    // &__top {
+    //   flex-direction: column;
+    //   gap: 40px;
+    //   align-items: start;
+    //   margin-bottom: 40px;
+    // }
+
+    // &__quite {
+    //   margin-left: 0;
+    // }
+  }
+
+  .choose {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .process {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 90px;
+      justify-items: center;
+      max-width: 536px;
+      margin: 0 auto 44px;
+    }
+  }
+
+  .footer {
+    &__top {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 50px;
+    }
+
+    &__link {
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid $white;
+      width: 100%;
+    }
+
+    &__social-list {
+      max-width: fit-content;
+      gap: 38px;
+    }
+
+    &__privacy .footer__link {
+      border-bottom: none;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    &__inner {
+      flex-direction: column;
+    }
+  }
+
+  .about {
+    &__content-wrapper {
+      max-width: 100%;
+      padding: 279px 0 0 0;
+    }
+
+    &__content {
+      &::before {
+        width: 100%;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  .service {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      max-width: 100%;
+    }
+
+    &__img {
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .gallery {
+    &__filter-list {
+      flex-wrap: wrap;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .contact-us {
+    &__inner {
+      flex-direction: column;
+    }
+  }
+}
