@@ -378,17 +378,30 @@
   &__input,
   &__textarea {
     @extend %main-400;
+    box-sizing: border-box;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0 4px;
     padding: 15px;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 8px;
     background-color: $light-blue;
+    transition: border-color 0.2s;
 
     &::placeholder {
       color: $gray;
       font-size: 14px;
     }
+
+    &--error {
+      border-color: $error;
+    }
+  }
+
+  &__error {
+    display: none;
+    color: $error;
+    font-size: 13px;
+    margin: 0 0 8px 2px;
   }
 
   &__textarea {

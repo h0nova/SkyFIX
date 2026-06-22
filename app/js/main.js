@@ -143,4 +143,62 @@ $(function () {
 
   initProcessSlider();
   $(window).on("resize", initProcessSlider);
+
+  // Form validation
+  var $form = $(".home__form");
+  var $nameInput = $form.find('[name="name"]');
+  var $phoneInput = $form.find('[name="phone"]');
+
+  $nameInput.after('<span class="home__error"></span>');
+  $phoneInput.after('<span class="home__error"></span>');
+
+  var $nameError = $nameInput.next(".home__error");
+  var $phoneError = $phoneInput.next(".home__error");
+
+  function isValidName(val) {
+    val = val.trim();
+    return val.length >= 2 && /^[a-zA-ZÀ-ÿ\s\-']+$/.test(val);
+  }
+
+  function isValidPhone(val) {
+    return val.replace(/\D/g, "").length >= 10;
+  }
+
+  function setFieldError($input, $error, msg) {
+    $input.addClass("home__input--error");
+    $error.text(msg).show();
+  }
+
+  function clearFieldError($input, $error) {
+    $input.removeClass("home__input--error");
+    $error.hide();
+  }
+
+  $nameInput.on("input", function () {
+    if (isValidName($(this).val())) clearFieldError($nameInput, $nameError);
+  });
+
+  $phoneInput.on("input", function () {
+    if (isValidPhone($(this).val())) clearFieldError($phoneInput, $phoneError);
+  });
+
+  $form.on("submit", function (e) {
+    var ok = true;
+
+    if (!isValidName($nameInput.val())) {
+      setFieldError($nameInput, $nameError, "Enter a valid name (letters only, min. 2 characters)");
+      ok = false;
+    } else {
+      clearFieldError($nameInput, $nameError);
+    }
+
+    if (!isValidPhone($phoneInput.val())) {
+      setFieldError($phoneInput, $phoneError, "Enter a valid phone number (min. 10 digits)");
+      ok = false;
+    } else {
+      clearFieldError($phoneInput, $phoneError);
+    }
+
+    if (!ok) e.preventDefault();
+  });
 });
