@@ -29,6 +29,7 @@ $blue-gradient: linear-gradient(125deg, $dark-blue 0%, $light-blue 100%);
 
 %button {
   @extend %main-500;
+  text-align: center;
   box-sizing: border-box;
   width: 100%;
   padding: 11px 25px;
