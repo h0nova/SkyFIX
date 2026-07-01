@@ -11,9 +11,15 @@
     <header class="header" id="header">
       <div class="container">
         <div class="header__inner">
-          <a href="#" class="logo">
-            <img src="images/logo.svg" alt="logo" class="logo__img" />
-          </a>
+          <div class="header__left">
+            <a href="#" class="logo">
+              <img src="images/logo.svg" alt="logo" class="logo__img" />
+            </a>
+            <div class="header__contacts">
+              <a href="tel:+12532178806" class="header__contact-link">+1 253 217 8806</a>
+              <a href="mailto:shopskyfix@gmail.com" class="header__contact-link">shopskyfix@gmail.com</a>
+            </div>
+          </div>
           <ul class="menu">
             <li class="menu__item">
               <a href="#home" class="menu__link">Home</a>
@@ -50,25 +56,34 @@
       <section class="call-now">
         <div class="call-now__inner">
           <div class="call-now__content">
-            <h2 class="call-now__title">
-              Call Now
-            </h2>
-              <p class="call-now__text">
-                Number
-              </p>
-              <a href="tel:+12532178806" class="call-now__link">
-                +1 253 217 8806
+            <p class="call-now__label">Get in touch</p>
+            <h2 class="call-now__title">Let's Talk<br /><span class="accent">About Your Project</span></h2>
+            <p class="call-now__desc">Our team is ready to answer your questions and provide a free consultation.</p>
+            <div class="call-now__contacts">
+              <a href="tel:+12532178806" class="call-now__contact-row">
+                <span class="call-now__contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8C7.8 13.2 9.8 15.2 12.2 16.4L14.1 14.5C14.3 14.3 14.7 14.2 15 14.4C16 14.7 17.1 14.9 18.2 14.9C18.7 14.9 19.1 15.3 19.1 15.8V18.7C19.1 19.2 18.7 19.6 18.2 19.6C10.1 19.6 3.6 13.1 3.6 5C3.6 4.5 4 4.1 4.5 4.1H7.4C7.9 4.1 8.3 4.5 8.3 5C8.3 6.1 8.5 7.1 8.8 8.1C8.9 8.4 8.8 8.8 8.6 9L6.6 10.8Z" fill="currentColor"/></svg>
+                </span>
+                <span class="call-now__contact-info">
+                  <span class="call-now__contact-label">Phone</span>
+                  <span class="call-now__contact-value">+1 253 217 8806</span>
+                </span>
               </a>
-              <p class="call-now__text">
-                Email
-              </p>
-              <a href="mailto:shopskyfix@gmail.com" class="call-now__link">
-                shopskyfix@gmail.com
+              <a href="mailto:shopskyfix@gmail.com" class="call-now__contact-row">
+                <span class="call-now__contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/></svg>
+                </span>
+                <span class="call-now__contact-info">
+                  <span class="call-now__contact-label">Email</span>
+                  <span class="call-now__contact-value">shopskyfix@gmail.com</span>
+                </span>
               </a>
+            </div>
           </div>
-          <img src="images/call-now.jpg" alt="call now" class="call-now__img">
-          <button class="call-now__btn">
-          </button>
+          <div class="call-now__photo-wrap">
+            <img src="images/call-now.jpg" alt="call now" class="call-now__img" />
+          </div>
+          <button class="call-now__btn" aria-label="Close"></button>
         </div>
       </section>
       <section class="home" id="home">
@@ -78,7 +93,7 @@
               <div class="home__top">
                 <img src="images/logo-blue.svg" alt="logo" class="home__img" />
                 <blockquote class="home__quite">
-                  Sky-high quality. Smart Solution. Trusted Results.
+                  Sky-high quality. Smart Solutions. Trusted Results.
                 </blockquote>
               </div>
               <h2 class="home__subtitle">
@@ -94,7 +109,7 @@
             </div>
             <div class="home__form-wrapper">
               <h2 class="home__subtitle">Request a consultation</h2>
-              <form action="https://formspree.io/f/xzdqpklb" method="POST" class="home__form">
+              <form action="https://formspree.io/f/xzdqpklb" method="POST" class="home__form" id="home__form">
                 <label class="home__label">
                   Full name*
                   <input
@@ -148,7 +163,7 @@
                   time so you can enjoy comfort and feel confident in the value
                   of your functional, elevated, and beautifully maintained home.
                 </p>
-                <button type="button" class="about__btn">Get to know us</button>
+                <button type="button" class="about__btn">Contact Us</button>
               </div>
             </div>
           </div>
@@ -183,7 +198,7 @@
               </li>
               <li class="choose__item">
                 <h3 class="choose__title">
-                  <span class="accent">Sremium</span> Quality
+                  <span class="accent">Premium</span> Quality
                 </h3>
                 <p class="choose__text">
                   We use durable materials and expert finishing for every job,
@@ -206,14 +221,14 @@
                   class="service__img"
                 />
                 <h3 class="service__title">
-                  Home Maintenance & Handyman Services
+                  Maintenance & Handyman Services
                 </h3>
                 <p class="service__text">
                   From essential roof and gutter cleaning to general property
                   repairs and seasonal upkeep, we provide reliable, professional
                   care to keep your home running smoothly and looking its best.
                 </p>
-                <button type="button" class="service__btn">Learn More</button>
+                <a href="#home" class="service__link">Request details</a>
               </li>
               <li class="service__item">
                 <img
@@ -228,7 +243,7 @@
                   bringing expert quality, functionality, and style to every
                   project.
                 </p>
-                <button type="button" class="service__btn">Learn More</button>
+                <a href="#home" class="service__link">Request details</a>
               </li>
               <li class="service__item">
                 <img
@@ -242,7 +257,7 @@
                   wood and composite decks, premium patio covers, and features
                   built for year-round comfort and entertainment.
                 </p>
-                <button type="button" class="service__btn">Learn More</button>
+                <a href="#home" class="service__link">Request details</a>
               </li>
               <li class="service__item">
                 <img
@@ -257,7 +272,7 @@
                   is precision-fitted for a clean look and a perfect seal
                   throughout your home.
                 </p>
-                <button type="button" class="service__btn">Learn More</button>
+                <a href="#home" class="service__link">Request details</a>
               </li>
               <li class="service__item">
                 <img
@@ -272,7 +287,7 @@
                   surfaces from the elements while giving your home a refreshed,
                   high-end appearance.
                 </p>
-                <button type="button" class="service__btn">Learn More</button>
+                <a href="#home" class="service__link">Request details</a>
               </li>
               <li class="service__item">
                 <img
@@ -282,12 +297,9 @@
                 />
                 <h3 class="service__title">Flooring & Tiling</h3>
                 <p class="service__text">
-                  We provide professional installation of hardwood, laminate,
-                  and vinyl plank, along with custom tile work for floors and
-                  backsplashes, delivering durable and level surfaces with a
-                  high-quality finish in every room.
+                  We provide professional installation of hardwood, laminate, vinyl plank, and custom tile. From floors to backsplashes, we deliver durable, perfectly level surfaces and a high-quality finish in every room.
                 </p>
-                <button type="button" class="service__btn">Learn More</button>
+                <a href="#home" class="service__link">Request details</a>
               </li>
             </ul>
           </div>
@@ -751,22 +763,30 @@
       <section class="contact-us" id="contact-us">
         <div class="container">
           <div class="contact-us__inner">
-            <img
-              src="images/logo-color.svg"
-              alt="logo"
-              class="contact-us__img"
-            />
             <div class="contact-us__content">
-              <h2 class="title">
-                Upgrade <span class="accent">Your Home</span> with the
-                <span class="accent">Sky-Fix</span> Remodels Team
+              <p class="contact-us__label">Ready to start?</p>
+              <h2 class="contact-us__title">
+                Upgrade <span class="accent">Your Home</span><br />
+                with the <span class="accent">Sky-Fix</span> Team
               </h2>
               <p class="contact-us__text">
                 Contact us today for your free estimate and consultation.
-                Experience stress-free service, expert craftsmanship, and
-                premium results.
+                Expert craftsmanship, stress-free experience, premium results.
               </p>
-              <button class="contact-us__btn">Contact Us</button>
+              <div class="contact-us__card">
+                <a href="tel:+12532178806" class="contact-us__card-link">
+                  <svg class="contact-us__card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8C7.8 13.2 9.8 15.2 12.2 16.4L14.1 14.5C14.3 14.3 14.7 14.2 15 14.4C16 14.7 17.1 14.9 18.2 14.9C18.7 14.9 19.1 15.3 19.1 15.8V18.7C19.1 19.2 18.7 19.6 18.2 19.6C10.1 19.6 3.6 13.1 3.6 5C3.6 4.5 4 4.1 4.5 4.1H7.4C7.9 4.1 8.3 4.5 8.3 5C8.3 6.1 8.5 7.1 8.8 8.1C8.9 8.4 8.8 8.8 8.6 9L6.6 10.8Z" fill="currentColor"/></svg>
+                  +1 253 217 8806
+                </a>
+                <a href="mailto:shopskyfix@gmail.com" class="contact-us__card-link">
+                  <svg class="contact-us__card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/></svg>
+                  shopskyfix@gmail.com
+                </a>
+              </div>
+              <button class="contact-us__btn">Schedule Free Consultation</button>
+            </div>
+            <div class="contact-us__logo-wrap">
+              <img src="images/logo-color.svg" alt="Sky-Fix logo" class="contact-us__logo" />
             </div>
           </div>
         </div>
@@ -784,7 +804,7 @@
               Roof & Gutter Cleaning | Painting & Finishing <br />
               Handyman Services Appliance Repair
             </p>
-            <button class="footer__btn">Leave a request</button>
+            <a href="#home" class="footer__link--big">Leave a request</a>
           </div>
           <ul class="footer__list">
             <li class="footer__item">
